@@ -61,7 +61,7 @@ const Chat = () => {
                 <ChatIcon className="md:w-[50px] md:h-[50px] h-[30px] w-[30px]" />
               </div>
               <p>
-                Welcome to the Webinar. You can engage with the speaker and other participants
+                Welcome to the Chat. You can engage with the speaker and other participants
                 through the chat below.
               </p>
             </div>

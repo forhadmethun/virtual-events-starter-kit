@@ -32,26 +32,26 @@ const EmptyRoom = () => {
     >
       <h2 className="text-3xl ">No Speakers Present</h2>
       <p className="text-gray-300 text-sm">
-        Looks like nobody has joined as a speaker. Invite someone to speak or change your role.
+        Looks like the speaker has not joined yet. Please wait.
       </p>
-      <div className="flex space-x-4 mt-8">
-        <div className="relative">
-          {copied ? (
-            <p className="absolute top-12 left-0 flex bg-gray-600 justify-center  rounded-lg w-48 p-2">
-              Copied to clipboard!
-            </p>
-          ) : null}
-          <Button onClick={() => copy()} variant="secondary">
-            <InviteIcon className="mr-2" /> Invite
-          </Button>
-        </div>
+      {/*<div className="flex space-x-4 mt-8">*/}
+      {/*  <div className="relative">*/}
+      {/*    {copied ? (*/}
+      {/*      <p className="absolute top-12 left-0 flex bg-gray-600 justify-center  rounded-lg w-48 p-2">*/}
+      {/*        Copied to clipboard!*/}
+      {/*      </p>*/}
+      {/*    ) : null}*/}
+      {/*    <Button onClick={() => copy()} variant="secondary">*/}
+      {/*      <InviteIcon className="mr-2" /> Invite*/}
+      {/*    </Button>*/}
+      {/*  </div>*/}
 
-        <ChangeRoleDialog>
-          <Button>
-            <PersonIcon className="mr-2" /> Change Role
-          </Button>
-        </ChangeRoleDialog>
-      </div>
+      {/*  <ChangeRoleDialog>*/}
+      {/*    <Button>*/}
+      {/*      <PersonIcon className="mr-2" /> Change Role*/}
+      {/*    </Button>*/}
+      {/*  </ChangeRoleDialog>*/}
+      {/*</div>*/}
     </div>
   );
 };
