@@ -30,7 +30,7 @@ export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
   const router = useRouter();
   const [name, setName] = React.useState(localStorage.getItem('name') || '');
   const audioEnabled = useHMSStore(selectIsLocalAudioEnabled);
-  const videoEnabled = useHMSStore(selectIsLocalVideoDisplayEnabled);
+  // const videoEnabled = useHMSStore(selectIsLocalVideoDisplayEnabled);
   const { enableJoin, join } = usePreview({
     token,
     name
@@ -41,7 +41,7 @@ export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
       <div className="w-[320px] flex flex-col md:ml-8 md:mt-0 mt-4 justify-between">
         <div>
           <p className="font-bold text-2xl my-0">Welcome {name}</p>
-          <p className="text-gray-400">Preview your video and audio before joining the stage</p>
+          <p className="text-gray-400">Preview {/*your video and*/}audio before joining the stage</p>
         </div>
         <form
           onSubmit={e => {
@@ -63,8 +63,8 @@ export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
             }}
           />
           <p className="flex items-center">
-            <InfoIcon className="mr-2" /> Note: Your mic is {audioEnabled ? 'on' : 'off'} and video
-            is {videoEnabled ? 'on' : 'off'}
+            <InfoIcon className="mr-2" /> Note: Your mic is {audioEnabled ? 'on' : 'off'}
+            {/*and video is {videoEnabled ? 'on' : 'off'}*/}
           </p>
           <div className="flex space-x-4">
             <Button variant="secondary" onClick={() => router.push('/')}>
@@ -93,9 +93,9 @@ const PreviewContainer: React.FC<{ name: string }> = ({ name }) => {
             <IconButton active={!isLocalAudioEnabled} onClick={toggleAudio}>
               {isLocalAudioEnabled ? <MicOnIcon /> : <MicOffIcon />}
             </IconButton>
-            <IconButton active={!isLocalVideoEnabled} onClick={toggleVideo}>
-              {isLocalVideoEnabled ? <VideoOnIcon /> : <VideoOffIcon />}
-            </IconButton>
+            {/*<IconButton active={!isLocalVideoEnabled} onClick={toggleVideo}>*/}
+            {/*  {isLocalVideoEnabled ? <VideoOnIcon /> : <VideoOffIcon />}*/}
+            {/*</IconButton>*/}
           </div>
           <div className="absolute z-30 bottom-4 right-4">
             <SettingDialog>
