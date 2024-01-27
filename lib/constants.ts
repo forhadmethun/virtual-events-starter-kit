@@ -24,7 +24,7 @@ export const META_DESCRIPTION =
   'This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
 export const SITE_DESCRIPTION =
   'An interactive online experience by the community, free for everyone.';
-export const DATE = '01 January 2022';
+export const DATE = new Date().toDateString();
 export const SHORT_DATE = 'Jan 1 - 9:00am PST';
 export const FULL_DATE = 'Jan 1st 9am Pacific Time (GMT-7)';
 export const TWEET_TEXT = META_DESCRIPTION;
@@ -40,34 +40,34 @@ export const CODE_OF_CONDUCT =
 export const REPO = 'https://github.com/vercel/virtual-event-starter-kit';
 export const SAMPLE_TICKET_NUMBER = 1234;
 export const NAVIGATION = [
-  {
-    name: 'Live Stage',
-    route: '/stage/a'
-  },
-  {
-    name: 'Vercel Stage',
-    route: '/stage/c'
-  },
-  {
-    name: '100ms Stage',
-    route: '/stage/m'
-  },
-  {
-    name: 'Schedule',
-    route: '/schedule'
-  },
-  {
-    name: 'Speakers',
-    route: '/speakers'
-  },
-  {
-    name: 'Expo',
-    route: '/expo'
-  },
-  {
-    name: 'Jobs',
-    route: '/jobs'
-  }
+  // {
+  //   name: 'Live', // Stage',
+  //   route: '/stage/a'
+  // },
+  // {
+  //   name: 'Vercel Stage',
+  //   route: '/stage/c'
+  // },
+  // {
+  //   name: '100ms Stage',
+  //   route: '/stage/m'
+  // },
+  // {
+  //   name: 'Schedule',
+  //   route: '/schedule'
+  // },
+  // {
+  //   name: 'Speakers',
+  //   route: '/speakers'
+  // },
+  // {
+  //   name: 'Expo',
+  //   route: '/expo'
+  // },
+  // {
+  //   name: 'Jobs',
+  //   route: '/jobs'
+  // }
 ];
 
 export type TicketGenerationState = 'default' | 'loading';

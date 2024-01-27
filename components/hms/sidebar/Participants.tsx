@@ -14,7 +14,7 @@ const Participants = () => {
       {backstagePeers.length > 0 && localPeer.roleName === 'backstage' ? (
         <>
           <div>
-            <p>Moderator ({backstagePeers.length})</p>
+            <p>Speaker {/*({backstagePeers.length})*/}</p>
             {backstagePeers.map(p => (
               <div key={p.id} className="flex items-center my-4">
                 <Avatar name={p.name} />

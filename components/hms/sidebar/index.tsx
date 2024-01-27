@@ -16,6 +16,7 @@ const Sidebar = ({ allStages }: Props) => {
   return (
     <Tabs.Root asChild defaultValue="1">
       <div className="sidebar-container">
+        <a target="_blank"  href="http://tinyurl.com/4dvdh72a" className="block text-center text-blue-500 py-2">Book Link <span className="ml-1" role="img" aria-label="link-icon">🔗</span></a>
         <Tabs.List className="w-full px-4 tabs">
           <Tabs.Trigger asChild value="1">
             <button className="w-1/2 text-gray-300 h-[35px] text-[14px] border-solid border border-gray-700 rounded-l-md">
@@ -24,11 +25,12 @@ const Sidebar = ({ allStages }: Props) => {
           </Tabs.Trigger>
 
           {localRole?.name === 'viewer' || localRole?.name === 'invitee' ? (
-            <Tabs.Trigger asChild value="3">
-              <button className="w-1/2  text-gray-300 h-[35px] text-[14px] border-solid border border-gray-700 rounded-r-md">
-                Schedule
-              </button>
-            </Tabs.Trigger>
+            // <Tabs.Trigger asChild value="3">
+            //   <button className="w-1/2  text-gray-300 h-[35px] text-[14px] border-solid border border-gray-700 rounded-r-md">
+            //     Schedule
+            //   </button>
+            // </Tabs.Trigger>
+            <></>
           ) : (
             <Tabs.Trigger asChild value="2">
               <button className="w-1/2  text-gray-300 h-[35px] text-[14px] border-solid border border-gray-700 rounded-r-md">
