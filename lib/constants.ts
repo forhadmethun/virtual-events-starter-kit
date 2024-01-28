@@ -17,11 +17,11 @@
 export const SITE_URL = 'https://100ms.vercel.app';
 export const SITE_ORIGIN = process.env.NEXT_PUBLIC_SITE_ORIGIN || new URL(SITE_URL).origin;
 export const TWITTER_USER_NAME = 'vercel';
-export const BRAND_NAME = 'DEMO';
+export const BRAND_NAME = 'PageTurner';
 export const SITE_NAME_MULTILINE = ['DEMO', 'Conf'];
 export const SITE_NAME = 'DEMO Conf';
 export const META_DESCRIPTION =
-  'This is an open source demo that Next.js developers can clone, deploy, and fully customize for events. Created through collaboration of marketers, designers, and developers at Vercel.';
+  'Connecting authors with their audience';
 export const SITE_DESCRIPTION =
   'An interactive online experience by the community, free for everyone.';
 export const DATE = new Date().toDateString();
@@ -33,7 +33,7 @@ export const COOKIE = 'user-id';
 // Remove process.env.NEXT_PUBLIC_... below and replace them with
 // strings containing your own privacy policy URL and copyright holder name
 export const LEGAL_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL;
-export const COPYRIGHT_HOLDER = process.env.NEXT_PUBLIC_COPYRIGHT_HOLDER;
+export const COPYRIGHT_HOLDER = 'PageTurner'; // process.env.NEXT_PUBLIC_COPYRIGHT_HOLDER;
 
 export const CODE_OF_CONDUCT =
   'https://www.notion.so/vercel/Code-of-Conduct-Example-7ddd8d0e9c354bb597a0faed87310a78';

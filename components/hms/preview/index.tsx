@@ -40,8 +40,15 @@ export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
       <PreviewContainer name={name} />
       <div className="w-[320px] flex flex-col md:ml-8 md:mt-0 mt-4 justify-between">
         <div>
-          <p className="font-bold text-2xl my-0">Welcome {name}</p>
-          <p className="text-gray-400">Preview {/*your video and*/}audio before joining the stage</p>
+          <p className="font-bold text-2xl my-0">
+            Welcome {name}, <br/>
+          </p>
+          <p>Start your stream as a fiction author</p>
+          <p className="text-gray-400">Preview {/*your video and*/}audio before joining {/*the stage*/}</p>
+          <ul>
+            <li>Enter your name below</li>
+            <li>Click the button `Start your stream`</li>
+          </ul>
         </div>
         <form
           onSubmit={e => {
@@ -53,7 +60,7 @@ export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
             value={name}
             type="name"
             autoComplete="name"
-            placeholder="Enter your name"
+            placeholder="Enter your name here"
             required
             maxLength={20}
             className="w-full text-md bg-gray-600 rounded-lg placeholder:text-gray-400 h-10 pl-2 focus:outline-none focus:bg-gray-700"
@@ -71,7 +78,7 @@ export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
               Go back
             </Button>
             <Button disabled={!enableJoin} type="submit">
-              Join Stage <ArrowRightIcon />
+              Start your stream <ArrowRightIcon />
             </Button>
           </div>
         </form>
@@ -87,8 +94,8 @@ const PreviewContainer: React.FC<{ name: string }> = ({ name }) => {
     <div className="w-[300px] h-[300px] relative flex justify-center items-center bg-gray-700 rounded-lg">
       {localPeer ? (
         <>
-          <PreviewVideo videoTrack={localPeer.videoTrack} />
-          <AudioLevel audioTrack={localPeer.audioTrack} />
+          {/*<PreviewVideo videoTrack={localPeer.videoTrack} />*/}
+          {/*<AudioLevel audioTrack={localPeer.audioTrack} />*/}
           <div className="absolute z-30 flex bottom-4 space-x-2">
             <IconButton active={!isLocalAudioEnabled} onClick={toggleAudio}>
               {isLocalAudioEnabled ? <MicOnIcon /> : <MicOffIcon />}

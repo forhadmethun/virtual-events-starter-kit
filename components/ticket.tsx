@@ -82,18 +82,18 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
               </>
             )}
           </h2>
-          <p className={cn(styles.description, styleUtils.appear, styleUtils['appear-second'])}>
-            {sharePage ? (
-              <>
-                Join {name ?? 'them'} on {DATE}.
-              </>
-            ) : (
-              <>
-                Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />
-                your GitHub profile.
-              </>
-            )}
-          </p>
+          {/*<p className={cn(styles.description, styleUtils.appear, styleUtils['appear-second'])}>*/}
+          {/*  {sharePage ? (*/}
+          {/*    <>*/}
+          {/*      Join {name ?? 'them'} on {DATE}.*/}
+          {/*    </>*/}
+          {/*  ) : (*/}
+          {/*    <>*/}
+          {/*      Generate a unique ticket image with <br className={styleUtils['hide-on-mobile']} />*/}
+          {/*      your GitHub profile.*/}
+          {/*    </>*/}
+          {/*  )}*/}
+          {/*</p>*/}
         </div>
         <div className={cn(styleUtils.appear, styleUtils['appear-third'])}>
           {!sharePage ? (
@@ -111,12 +111,12 @@ export default function Ticket({ username, name, ticketNumber, sharePage }: Prop
           ref={ticketRef}
           className={cn(styles['ticket-visual'], styleUtils.appear, styleUtils['appear-fourth'])}
         >
-          <TicketVisual
-            username={username}
-            name={name}
-            ticketNumber={ticketNumber}
-            ticketGenerationState={ticketGenerationState}
-          />
+          {/*<TicketVisual*/}
+          {/*  username={username}*/}
+          {/*  name={name}*/}
+          {/*  ticketNumber={ticketNumber}*/}
+          {/*  ticketGenerationState={ticketGenerationState}*/}
+          {/*/>*/}
         </div>
         {!sharePage && (
           <>

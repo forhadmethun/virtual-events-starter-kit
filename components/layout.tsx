@@ -54,12 +54,15 @@ export default function Layout({
           <header className={cn(styles.header)}>
             <div className={styles['header-logos']}>
               <MobileMenu key={router.asPath} />
-              <Link href="/">
+              {/*<Link href="/">*/}
                 {/* eslint-disable-next-line */}
-                <a className={styles.logo}>
-                  <Logo />
-                </a>
-              </Link>
+                <h2
+                    // className={styles.logo}
+                >
+                  {/*<Logo />*/}
+                  PageTurner
+                </h2>
+              {/*</Link>*/}
             </div>
             <div className={styles.tabs}>
               {NAVIGATION.map(({ name, route }) => (
