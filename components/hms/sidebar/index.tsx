@@ -5,6 +5,7 @@ import Participants from './Participants';
 import ScheduleSidebar from '@components/schedule-sidebar-individual';
 import { Stage } from '@lib/types';
 import * as Tabs from '@radix-ui/react-tabs';
+import {BOOK_URL} from "@lib/constants";
 
 type Props = {
   allStages: Stage[];
@@ -16,7 +17,7 @@ const Sidebar = ({ allStages }: Props) => {
   return (
     <Tabs.Root asChild defaultValue="1">
       <div className="sidebar-container">
-        <a target="_blank" href="http://tinyurl.com/4dvdh72a" className="block text-center bg-white text-black py-2 no-underline m-5">
+        <a target="_blank" href={BOOK_URL} className="block text-center bg-white text-black py-2 no-underline m-5">
           Book Link <span className="ml-1" role="img" aria-label="link-icon">🔗</span>
         </a>
 

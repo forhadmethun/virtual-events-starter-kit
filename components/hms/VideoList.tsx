@@ -16,6 +16,8 @@ import Pagination from './Pagination';
 import MobileView from './mobile';
 import { hmsConfig } from './config';
 import ScreenshareTile from './ScreenshareTile';
+import Image from "next/image";
+import {SPEAKER_IMG_URL} from "@lib/constants";
 
 const VideoList = () => {
   const activeSpeakerThreshold = hmsConfig.activeSpeakerThreshold;
@@ -83,16 +85,23 @@ const NonActiveSpeakerView: React.FC<{ peers: HMSPeer[] }> = ({ peers }) => {
   });
   return (
     <div ref={ref} className="w-full h-full flex flex-wrap place-content-center items-center">
-      {pagesWithTiles &&
-        pagesWithTiles.length > 0 &&
-        pagesWithTiles[0].map((p, _) => (
-          <VideoTile
-            key={p.peer.id}
-            width={p.width}
-            height={p.height}
-            trackId={p.peer.videoTrack || ''}
-          />
-        ))}
+      <Image
+          src={SPEAKER_IMG_URL}
+          alt="Example Image"
+          width={500}
+          height={500}
+      />
+
+      {/*{pagesWithTiles &&*/}
+      {/*  pagesWithTiles.length > 0 &&*/}
+      {/*  pagesWithTiles[0].map((p, _) => (*/}
+      {/*    <VideoTile*/}
+      {/*      key={p.peer.id}*/}
+      {/*      width={p.width}*/}
+      {/*      height={p.height}*/}
+      {/*      trackId={p.peer.videoTrack || ''}*/}
+      {/*    />*/}
+      {/*  ))}*/}
     </div>
   );
 };

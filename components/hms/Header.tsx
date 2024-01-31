@@ -9,6 +9,7 @@ import {
 import UsersIcon from '@components/icons/icon-users';
 import { useRouter } from 'next/router';
 import React from 'react';
+import {SPEAKER_NAME} from "@lib/constants";
 
 const Header = () => {
   const router = useRouter();
@@ -44,7 +45,7 @@ const Header = () => {
 
         <div className="flex md:flex-row flex-col md:items-center align-end md:gap-2  gap-x-2">
           <div className="flex flex-row items-center align-bottom md:gap-2 gap-x-2">
-            <p className="font-semibold md:text-2xl my-0 text-sm md:leading-8 ">Demo Event</p>
+            <p className="font-semibold md:text-2xl my-0 text-sm md:leading-8 ">{SPEAKER_NAME}</p>
             <span
               className="flex md:px-1 px-0.5 font-semibold md:text-sm text-xs rounded-sm items-center "
               style={{ backgroundColor: '#ed4c5a' }}
@@ -55,7 +56,7 @@ const Header = () => {
 
           <div className="flex  ">
             <span className="text-md leading-5 " style={{ color: '#999a99' }}>
-              9:30 pm - 10:30 pm
+              {/*9:30 pm - 10:30 pm*/}
             </span>
           </div>
         </div>

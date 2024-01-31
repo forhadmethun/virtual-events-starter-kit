@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 import { Loading } from '../Loading';
 import {
   MicOffIcon,
@@ -25,10 +27,11 @@ import SettingDialog from '../SettingDialog';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import IconButton from './IconButton';
+import {SPEAKER_IMG_URL, SPEAKER_NAME} from "@lib/constants";
 
 export const PreviewScreen: React.FC<{ token: string }> = ({ token }) => {
   const router = useRouter();
-  const [name, setName] = React.useState(localStorage.getItem('name') || '');
+  const [name, setName] = React.useState(localStorage.getItem('name') || SPEAKER_NAME);
   const audioEnabled = useHMSStore(selectIsLocalAudioEnabled);
   // const videoEnabled = useHMSStore(selectIsLocalVideoDisplayEnabled);
   const { enableJoin, join } = usePreview({
@@ -94,6 +97,12 @@ const PreviewContainer: React.FC<{ name: string }> = ({ name }) => {
     <div className="w-[300px] h-[300px] relative flex justify-center items-center bg-gray-700 rounded-lg">
       {localPeer ? (
         <>
+          <Image
+              src={SPEAKER_IMG_URL}
+              alt="Example Image"
+              width={200}
+              height={200}
+          />
           {/*<PreviewVideo videoTrack={localPeer.videoTrack} />*/}
           {/*<AudioLevel audioTrack={localPeer.audioTrack} />*/}
           <div className="absolute z-30 flex bottom-4 space-x-2">
@@ -111,7 +120,7 @@ const PreviewContainer: React.FC<{ name: string }> = ({ name }) => {
               </IconButton>
             </SettingDialog>
           </div>
-          {isLocalVideoEnabled ? null : <Avatar size="lg" className="absolute z-10" name={name} />}
+          {/*{isLocalVideoEnabled ? null : <Avatar size="lg" className="absolute z-10" name={name} />}*/}
         </>
       ) : (
         <Loading size={90} />
