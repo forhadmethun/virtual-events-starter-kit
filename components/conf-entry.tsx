@@ -22,6 +22,7 @@ import LoadingDots from './loading-dots';
 import { register } from '@lib/user-api';
 import useEmailQueryParam from '@lib/hooks/use-email-query-param';
 import Captcha, { useCaptcha } from './captcha';
+import {SPEAKER_EMAIL} from "@lib/constants";
 
 type FormState = 'default' | 'loading' | 'error';
 
@@ -37,7 +38,7 @@ function getErrorMsg(code: string) {
 }
 
 export default function ConfEntry({ onRegister }: { onRegister: () => void }) {
-  const [emailInput, setEmailInput] = useState('');
+  const [emailInput, setEmailInput] = useState(SPEAKER_EMAIL);
   const [focused, setFocused] = useState(false);
   const [formState, setFormState] = useState<FormState>('default');
   const [errorMsg, setErrorMsg] = useState('');
