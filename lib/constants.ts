@@ -72,7 +72,7 @@ export const NAVIGATION = [
 
 export type TicketGenerationState = 'default' | 'loading';
 
-export const BOOK_URL = 'http://tinyurl.com/4dvdh72a';
-export const SPEAKER_EMAIL = 'speaker@mail.com';
-export const SPEAKER_NAME = 'Speaker';
+export const BOOK_URL = 'https://tlinky.one/APPNQ';
+export const SPEAKER_EMAIL = 'nicolasmharrison@gmail.com';
+export const SPEAKER_NAME = 'Nicolas Harrison';
 export const SPEAKER_IMG_URL = '/img.png';
