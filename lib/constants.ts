@@ -72,7 +72,7 @@ export const NAVIGATION = [
 
 export type TicketGenerationState = 'default' | 'loading';
 
-export const BOOK_URL = 'https://www.amazon.com/dp/B0CH4HJ6BB';
+export const BOOK_URL = 'www.anurl.in/B0CH4HJ6BB';
 export const SPEAKER_EMAIL = 'nicolasmharrison@gmail.com';
 export const SPEAKER_NAME = 'Nicolas Harrison';
 export const SPEAKER_IMG_URL = '/img.png';
