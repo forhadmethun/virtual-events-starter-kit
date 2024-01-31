@@ -10,6 +10,8 @@ import {
 import VideoTile from '../VideoTile';
 import ScreenshareTile from '../ScreenshareTile';
 import { hmsConfig } from '../config';
+import Image from "next/image";
+import {SPEAKER_IMG_URL} from "@lib/constants";
 
 const MobileView: React.FC<{ activePeer: HMSPeer; allPeers: HMSPeer[] }> = ({
   activePeer,
@@ -62,6 +64,14 @@ const MobileHeader = () => {
         <span className="text-xs">Auto</span>
       </div>
       <div className="h-[80%] w-[1px] bg-gray-700 mx-4" />
+      <div className="pt-16">
+          <Image
+              src={SPEAKER_IMG_URL}
+              alt="Example Image"
+              width={500}
+              height={500}
+          />
+      </div>
       <div className="w-full flex overflow-x-scroll">
         {stagePeers.map(l => (
           <div key={l.id} className="flex flex-col justify-center items-center space-y-2 mx-2">
