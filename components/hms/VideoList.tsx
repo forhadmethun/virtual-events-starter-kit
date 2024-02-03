@@ -88,8 +88,8 @@ const NonActiveSpeakerView: React.FC<{ peers: HMSPeer[] }> = ({ peers }) => {
       <Image
           src={SPEAKER_IMG_URL}
           alt="Example Image"
-          width={500}
-          height={500}
+          width={350}
+          height={350}
       />
 
       {/*{pagesWithTiles &&*/}
