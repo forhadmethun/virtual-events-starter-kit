@@ -72,7 +72,7 @@ export const NAVIGATION = [
 
 export type TicketGenerationState = 'default' | 'loading';
 
-export const BOOK_URL = 'https://tlinky.one/HDDJK';
-export const SPEAKER_EMAIL = 'stuartkallison@gmail.com';
-export const SPEAKER_NAME = 'Stuart Allison';
+export const BOOK_URL = 'https://tlinky.one/khCTj';
+export const SPEAKER_EMAIL = 'authormbrooks@gmail.com';
+export const SPEAKER_NAME = 'Michael J. Brooks';
 export const SPEAKER_IMG_URL = '/img.png';
