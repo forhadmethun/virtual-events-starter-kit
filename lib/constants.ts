@@ -72,7 +72,7 @@ export const NAVIGATION = [
 
 export type TicketGenerationState = 'default' | 'loading';
 
-export const BOOK_URL = 'https://tlinky.one/XoWMx';
-export const SPEAKER_EMAIL = 'Chrisunderwood@columbus.rr.com';
-export const SPEAKER_NAME = 'Chris Underwood';
+export const BOOK_URL = 'https://tlinky.one/hyQzS';
+export const SPEAKER_EMAIL = 'rafal.zygula@gmail.com';
+export const SPEAKER_NAME = 'Rafal Zygula';
 export const SPEAKER_IMG_URL = '/img.png';
